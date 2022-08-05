@@ -1,8 +1,13 @@
-# Exploration of Loan Dataset from Prosper
-The project is about exploratory data analysis(EDA) of a loan dataset from Prosper in python language, which is a part of Udacity Data Analyst Nanodegree.
+# Loan Dataset from Prosper
+## by Halima Nasula Merenga
 
-## Overview
-Prosper is a leading financial peer-to-peer lending platform company which connects borrowers and investors. In this Prosper loan data set, it roughly contains four kinds of loan data information — Loan Status, Borrower Data, Loan Information Data and Credit Risk Matrices during 2005 to 2014. I started by understanding some stories about Prosper and exploring the individual variables related to my initial question of interest — **What factors are connected to defaulted/completed loan?** Then I found Prosper have improved their credit measurement system by Prosper Rating from only using Credit Score before. And I continued to make observations on plots through using R language and ggplot2, then I make assumption that maybe Prosper put more weight of Prosper Prosper Score than Credit Score in their Prosper Rating. I kept exploring features related to Prosper Score and relationship between Prosper Score and these features and Loan Status. Eventually, I pick features that I observed that having some trends with Loan Status and Prosper Score. I created a Logistic model to predict the likelihood of a loan would be high risk or completed using these features.
 
-## Data
-This Prosper loan data set can be download from [here](https://www.google.com/url?q=https://s3.amazonaws.com/udacity-hosted-downloads/ud651/prosperLoanData.csv&sa=D&ust=1544172248160000) which was provided by Udacity. The dataset contains 113,937 loans with 81 variables on each loan, for more variable definition, see the [link](https://www.google.com/url?q=https://docs.google.com/spreadsheets/d/1gDyi_L4UvIrLTEC6Wri5nbaMmkGmLQBk-Yx3z0XDEtI/edit?usp%3Dsharing&sa=D&ust=1544172608919000).
+## Dataset
+
+> The Loan Dataset is from Prosper, a lending marketplace in the United States, and contains 113,937 loans with 81 variables on each loan, including loan amount, Monthly Loan Payment, borrower rate, current loan status, borrower income etc.
+
+
+## Summary of Findings
+
+>In the exploration, I found that Borrower APR  and BorrowerRate are inversely proportional to credit score . A higher credit score qualifies you for the lowest interest rates. There is a small but significant positive correlation between DebtToIncome Ratio and BorrowAPR. The lower the DTI ratio, the lower the BorrowerAPR. Borrower Rate is higher for Long Term loans and shortest in short term loans. Typically, the longer the loan term, the higher the interest rate will be (but not always). That’s because shorter terms guarantee the lender will have their money back sooner, so there’s less risk. Employment status duration is inversely proportional to the BorrowerRate. Loan Lenders may look at your employment duration to determine if you are a high risk. DTI Ratio is directly proportional to Borrower Rate. A lower debt to income ratio is likely to have a lower borrowerRate. From Pearson's  correlation coefficient, We can see that there is a strong positive correlation between BorrowerAPR and BorrowerRate, Lender Yield and Borrower Rate and Monthly Loan Payment and Loan Original Amount . Across all credit score groups, the Long term loans have the highest BorrowerRate  while the BorrowerRate is lowest in each credit score group when the loan term is short. Across most loan status groups, the loan original amount is highest for long term loans and lowest for short term loans meaning , someone who takes a large loan amount will need more time to pay it back as compared to someone who has a small loan amount who will need a shorter time to pay it pack . 
+
